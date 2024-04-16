@@ -21,6 +21,7 @@ Este comando lo que hace es buscar todos los puertos abiertos (1-65535) (`-p-`, 
 ![captura-escaneo](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/6325e4c3-4c66-4f37-8a8f-13ae1cadf981)
 
 Puertos **abiertos**
+
 Puerto **80 -> HTTP**
 
 ## Fuzzing
