@@ -32,3 +32,33 @@ Utilizamos la herramienta **gobuster** para encontrar directorios y archivos.
 Vemos que al buscar el **upload.php** sale esto.
 
 ![captura-php](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/af42f71d-8c3f-4cd1-a9c4-c605eaf6b876)
+
+## Reverse shell
+
+Vemos que podemos subir archivos, por lo que podemos subir una reverse shell para ganar acceso.
+
+![captura-upload](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/51f3fdfc-762e-4743-9a28-98cfde8c3285)
+
+Ahora buscamos donde se ha subido la reverse shell. Si miramos en los directorios que ha encontrado **gobuster**, vemos que hay un directorio llamado **uploads**.
+
+![captura-encontrar](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/88c2d777-226d-49b5-a74f-24e020bc776e)
+
+En este caso voy a utilizar el puerto **443** en escucha. Y la IP, es la nuestra, la de Kali Linux.
+
+![captura-reverse](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/d38ac2fa-549d-4170-b367-822a1916649e)
+
+`nc -nlvp 443`
+
+![captura-reverseshell](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/e87bf22d-53bf-4735-b98d-ec8d531b7ef6)
+
+## Escalada de privilegios
+
+Vemos que podemos ejecutar como **root** el comando **env**
+
+![captura-sudo](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/e1edf513-43a7-43ac-a6cf-a06de6f272d0)
+
+Entonces podemos hacer lo siguiente para conseguir una shell como root.
+
+![captura-root](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/e202f8c0-df8a-48f8-9379-f388a29d4030)
+
+Y ya somos root!!
