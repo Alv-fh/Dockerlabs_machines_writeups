@@ -16,7 +16,7 @@ Usamos la herramienta **nmap** para el escaneo de puertos.
 
 `sudo nmap -p- -sS -sC -sV --min-rate=5000 -n -vvv -Pn 172.17.0.2 -oN puertos`
 
-Este comando lo que hace es buscar todos los puertos abiertos (1-65535) (`-p-`, lo hace de manera sigilosa (`-sS`), busca la versión de los servicios ( `-sV`), de manera rápida(`--min-rate=5000`), desactiva la resolución DNS para evitar problemas(`-n`), utiliza triple verbose para que tengamos más detalle del escaneo (`-vvv`)y omite la detección de host(`-Pn`). Lo guarda en el fichero allPorts (`-oN puertos`).
+Este comando lo que hace es buscar todos los puertos abiertos (1-65535) (`-p-`), lo hace de manera sigilosa (`-sS`), busca la versión de los servicios ( `-sV`), de manera rápida(`--min-rate=5000`), desactiva la resolución DNS para evitar problemas(`-n`), utiliza triple verbose para que tengamos más detalle del escaneo (`-vvv`)y omite la detección de host(`-Pn`). Lo guarda en el fichero allPorts (`-oN puertos`).
 
 ![captura-puertos](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/a4043998-5bce-4d9c-8ff7-a77a2a6eee03)
 
