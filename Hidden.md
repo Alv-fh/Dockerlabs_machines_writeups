@@ -151,7 +151,7 @@ Hacemos uso de la herramienta.
 
 ![captura-apt](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/3f6400df-a17c-4c28-9ed8-bfa4a182ede3)
 
-sudo -u bobby /usr/bin/apt changelog apt
+`sudo -u bobby /usr/bin/apt changelog apt`
 
 Probamos el primero...
 
