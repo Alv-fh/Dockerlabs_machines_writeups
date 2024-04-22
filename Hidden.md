@@ -151,6 +151,8 @@ Hacemos uso de la herramienta.
 
 ![captura-apt](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/3f6400df-a17c-4c28-9ed8-bfa4a182ede3)
 
+sudo -u bobby /usr/bin/apt changelog apt
+
 Probamos el primero...
 
 ![captura-bobby2](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/6aaecb49-e7ac-4f82-897c-b720dd9906f8)
