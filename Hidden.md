@@ -153,6 +153,8 @@ Hacemos uso de la herramienta.
 
 `sudo -u bobby /usr/bin/apt changelog apt`
 
+`!/bin/sh`
+
 Probamos el primero...
 
 ![captura-bobby2](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/6aaecb49-e7ac-4f82-897c-b720dd9906f8)
