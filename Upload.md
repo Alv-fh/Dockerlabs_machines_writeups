@@ -14,7 +14,7 @@ Vemos que hay conectividad con la máquina y sabemos que es Linux por el **TTL**
 
 Usamos la herramienta **nmap** para el escaneo de puertos.
 
-`sudo nmap -p- -sS -sS -sV --min-rate=5000 -n -vvv -Pn 172.17.0.2 -oN abiertos`
+`sudo nmap -p- -sS -sC -sV --min-rate=5000 -n -vvv -Pn 172.17.0.2 -oN abiertos`
 
 Este comando lo que hace es buscar todos los puertos abiertos (1-65535) (`-p-`, lo hace de manera sigilosa (`-sS`), busca la versión de los servicios ( `-sV`), de manera rápida(`--min-rate=5000`), desactiva la resolución DNS para evitar problemas(`-n`), utiliza triple verbose para que tengamos más detalle del escaneo (`-vvv`)y omite la detección de host(`-Pn`). Lo guarda en el fichero allPorts (`-oN allPorts`).
 
