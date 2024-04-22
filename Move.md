@@ -94,7 +94,7 @@ Entramos en él para ver lo que hay.
 
 ![captura-print](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/7161ba0f-cd72-4ad2-8cb3-d2af913c77c5)
 
-A través de la herramienta (Searchbins)[https://github.com/r1vs3c/searchbins] que está basada en la página (GTFOBins)[https://gtfobins.github.io/].
+A través de la herramienta [Searchbins](https://github.com/r1vs3c/searchbins) que está basada en la página [GTFOBins](https://gtfobins.github.io/).
 
 Vemos que podemos editar el archivo por lo que podemos hacernos una shell importanto la librería **os**.
 
