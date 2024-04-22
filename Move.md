@@ -80,14 +80,32 @@ Y vemos la clave de freddy. Por lo que podemos probar por SSH ya que si recordam
 
 ![captura-freddy](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/24d05b02-627b-43f2-b47d-ab78c3fd56df)
 
-Entramos con freddy y vemos que está corriendo un Kali Linux
+Entramos con freddy y vemos que está corriendo un Kali Linux.
 
 Lo siguiente es entrar con root.
 
 ![captura-freddy2](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/8f8f56f9-c647-4688-a8e4-e85d74d57c6b)
 
-Vemos que podemos ejecutar como cualquier usuario el script de python llamado maintenance.py
+Vemos que podemos ejecutar como cualquier usuario el script de python llamado maintenance.py.
 
 ![captura-sudo](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/337dd9c0-ce51-4e6a-82cd-6ce6d0d03fe3)
 
 Entramos en él para ver lo que hay.
+
+![captura-print](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/7161ba0f-cd72-4ad2-8cb3-d2af913c77c5)
+
+A través de la herramienta (Searchbins)[https://github.com/r1vs3c/searchbins] que está basada en la página (GTFOBins)[https://gtfobins.github.io/].
+
+Vemos que podemos editar el archivo por lo que podemos hacernos una shell importanto la librería **os**.
+
+![captura-searchbins](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/af50aeef-51b1-4986-b989-45c57c4258a2)
+
+Por lo que lo hacemos en el script.
+
+![captura-bin](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/95a5bad8-0f1e-45f5-b311-61bf7b372677)
+
+Y vemos que al ejecutarlo funciona correctamente.
+
+![captura-root](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/8e259f05-609f-42c7-8d3b-bc9df947890d)
+
+Ya somos root!!
