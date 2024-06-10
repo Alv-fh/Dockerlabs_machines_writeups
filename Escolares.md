@@ -15,6 +15,7 @@ Utilizamos la herramienta **nmap** y vemos los puertos abiertos.
 ![image](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/e5be85fa-ba08-4e29-bb74-67363ccd0184)
 
 22 -> SSH
+
 80 -> HTTP
 
 ## Fuzzing Web
@@ -33,4 +34,12 @@ Entramos en **trackback.php** y sale esto:
 
 ![image](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/77af5199-cc6f-4537-acfb-d694e08b14ad)
 
+En el fuzzing web descubro que hay un dominio ya que veo la ruta absoluta y veo que **http://escolares.dl/**, por lo que lo añado al fichero **/etc/hosts**
 
+![image](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/e4e29956-e55d-48d8-8320-e50e44be976e)
+
+Si busco **xmlrpc.php** sale lo siguiente:
+
+![image](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/ecc381e5-9b32-48c0-a037-ac5d6b5ac10b)
+ 
+Entonces decido ir al 
