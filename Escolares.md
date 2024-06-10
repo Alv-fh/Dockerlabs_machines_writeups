@@ -34,6 +34,3 @@ Entramos en **trackback.php** y sale esto:
 ![image](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/77af5199-cc6f-4537-acfb-d694e08b14ad)
 
 
-
-
- n
