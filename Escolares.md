@@ -42,4 +42,9 @@ Si busco **xmlrpc.php** sale lo siguiente:
 
 ![image](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/ecc381e5-9b32-48c0-a037-ac5d6b5ac10b)
  
-Entonces decido ir al 
+Inspecciono la página y veo que hay un comentario en donde hace referencia a una ruta, por lo que decido ir.
+
+![image](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/58b1ac8d-73cc-4e73-8df8-e7b724b54965)
+
+Veo que luis es el admin, voy a intentar sacar la contraseña de luis con hydra.
+
