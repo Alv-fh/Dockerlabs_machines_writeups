@@ -22,10 +22,6 @@ Utilizamos la herramienta **nmap** y vemos los puertos abiertos.
 
 ![image](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/d1586d08-6d99-4a65-b7cd-4e29e7264245)
 
-Vemos que en el reporte de **gobuster** encuentra una ruta llamada **phpmyadmin**. Entrramos y vemos esto:
-
-![image](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/eef5c66d-9b0c-46a6-b51c-fb398c95b65d)
-
 También vemos que si le hacemos fuzzing a la ruta `http://ip/wordpress/` nos enumera esto:
 
 ![image](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/cd9e357a-d30d-4540-a990-8edaf5ed919d)
