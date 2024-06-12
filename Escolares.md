@@ -41,10 +41,18 @@ En el fuzzing web descubro que hay un dominio ya que veo la ruta absoluta y veo 
 Si busco **xmlrpc.php** sale lo siguiente:
 
 ![image](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/ecc381e5-9b32-48c0-a037-ac5d6b5ac10b)
- 
+
 Inspecciono la página y veo que hay un comentario en donde hace referencia a una ruta, por lo que decido ir.
 
 ![image](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/58b1ac8d-73cc-4e73-8df8-e7b724b54965)
 
-Veo que luis es el admin, voy a intentar sacar la contraseña de luis con hydra.
+Veo que luis es el admin, debajo en el correo pone luisillo por lo que puede que sea el usuario. Intento con **wpscan**
+
+Tendremos que crear con la herramienta **cupp** un diccionario, y pondremos los datos que salen. Una vez generado, lo ponemos en el **wpscan**
+
+`wpscan --url http://escolares.dl/wordpress -U luisillo --passwords luis.txt`
+
+![image](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/f4eb66ed-6bf2-497f-bac7-7df7b993f601)
+
+Encontramos la clave de luisillo
 
