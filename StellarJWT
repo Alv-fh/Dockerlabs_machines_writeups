@@ -1,0 +1,86 @@
+Hacemos los escaneo de reconocimiento y vemos el puerto 22 y 80 abiertos
+
+![[Pentesting/Writeups/Images/StellarJWT/2.png]]
+
+Entramos en la Web y vemos esta pregunta
+
+![[Pentesting/Writeups/Images/StellarJWT/3.png]]
+
+
+Buscamos en Internet y nos quedamos con el nombre Gottfried:
+
+![[Pentesting/Writeups/Images/StellarJWT/4.png]]
+
+Hacemos fuzzing y vemos una ruta:
+
+/universe
+
+![[Pentesting/Writeups/Images/StellarJWT/5.png]]
+
+Vemos una imagen que a simple vista no hay nada.
+
+![[Pentesting/Writeups/Images/StellarJWT/6.png]]
+
+Entramos en el código fuente y si bajamos abajo del todo vemos lo que parece un JSON.
+
+![[Pentesting/Writeups/Images/StellarJWT/7.png]]
+
+Entramos en JWT y descubrimos el usuario neptuno.
+
+![[Pentesting/Writeups/Images/StellarJWT/8.png]]
+
+Ahora la mayoría de gente intentará fuerza bruta, pero recordamos el nombre de antes, así que conseguimos entrar por ssh con la clave Gottfried.
+
+Listamos todo y vemos un archivo oculto.
+
+![[Pentesting/Writeups/Images/StellarJWT/9.png]]
+
+Lo abrimos y a simple vista parece un usuario. Vemos los usuarios del sistema y vemos uno que es nasa, intentamos poner de clave el nombre ese y efectivamente entramos.
+
+![[Pentesting/Writeups/Images/StellarJWT/10.png]]
+
+Vemos que podemos ejecutar el binario socat como el usuario elite. Lo ejecutamos buscando en GTFOBins y conseguimos la shell. Aquí recomiendo que hagan una revshell porque luego va a dar problemas el Bypass de contraseña.
+
+![[Pentesting/Writeups/Images/StellarJWT/11.png]]
+
+Hacemos una revshell y sanitizamos la TTY.
+
+![[Pentesting/Writeups/Images/StellarJWT/12.png]]
+
+Ahora sanitizamos.
+
+![[Pentesting/Writeups/Images/StellarJWT/13.png]]
+
+Hacemos sudo -l y vemos que podemos ejecutar el binario chown como root.
+
+Bypass de contraseña entra aquí
+
+Nos asignamos propietarios del /etc/passwd
+
+![[Pentesting/Writeups/Images/StellarJWT/14.png]]
+
+No tenemos editor de texto instalado, por lo que hacemos lo siguiente
+
+Copiamos el /etc/passwd y en nuestro Kali lo ponemos en un fichero y le quitamos la x
+
+![[Pentesting/Writeups/Images/StellarJWT/15.png]]
+
+Ahora lo mostramos y lo copiamos.
+
+Ponemos 
+`echo 'TODO_EL_ETC_PASSWD' > /etc/passwd`
+
+Ya no tiene la x root
+
+![[Pentesting/Writeups/Images/StellarJWT/16.png]]
+
+Entramos y nos vamos a su directorio y vemos un script. Lo ejecutamos y ...
+
+![[Pentesting/Writeups/Images/StellarJWT/17.png]]
+![[Pentesting/Writeups/Images/StellarJWT/18.png]]
+
+![[Pentesting/Writeups/Images/StellarJWT/19.png]]
+
+Es un test, para ver si se ha aprendido lo que se ve en esta máquina con algunas bromas :)
+
+Espero que te guste Don Mario.
