@@ -1,5 +1,8 @@
 # Writeup
 
+![image](https://github.com/user-attachments/assets/b93aa5be-e943-464e-80e6-e4d5d7721685)
+
+
 ## Levantar la máquina
 
 ![captura-levantar](https://github.com/Alv-fh/Dockerlabs_machines_writeups/assets/109484163/9d4239a7-fab0-428c-ba60-49dc1928efa3)
